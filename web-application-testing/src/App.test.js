@@ -2,8 +2,23 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+
+test('it displays hit state component', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  getByText(/hits/i);
+  });
+
+  test('it returns all p tags', () => {
+    const { findAllByText } = render(<App />);
+    findAllByText("p-tags");
+    });
+
+    test('it displays hit state component', () => {
+      const { getByText } = render(<App />);
+      getByText(/fouls/i);
+      });
+
+
+test('renders without crashing', () => {
+  render(<App />);
 });

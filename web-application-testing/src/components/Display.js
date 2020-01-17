@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
+import Dashboard from "./DashBoard";
 
-
-export default function Display({strikes, balls, hit, foul }) {
-
-   return (
-       <div>
-            <h4>Strikes : {strikes}</h4>
-            <h4>Balls : {balls}</h4>
-            <h4>Hit : {hit}</h4>
-            <h4>Foul : {foul}</h4>
-            </div>
-    )
-} 
+export default function Display({ strikes, balls, hits, fouls }) {
+  return (
+    <div>
+      <Dashboard />
+      <button onClick={strikes}>Strike</button>
+      <button onClick={hits}>Hit</button>
+      <button onClick={fouls}>Foul</button>
+      <button onClick={balls}>Ball</button>
+    </div>
+  );
+}
